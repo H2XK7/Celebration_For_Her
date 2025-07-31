@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --primary: #ff69b4;
+  --secondary: #ffb6c1;
+  --accent: #ffd700;
+  --background: #fff8f0;
+  --text: #2d3748;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Custom Font Classes */
+.font-comfortaa {
+  font-family: "Comfortaa", cursive;
+}
+
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+.font-dancing {
+  font-family: "Dancing Script", cursive;
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+  background: linear-gradient(135deg, #ff69b4 0%, #ffb6c1 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card Styles - Traditional Greeting Card Book */
+.birthday-card {
+  @apply bg-white backdrop-blur-sm rounded-2xl shadow-2xl;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 8px solid #ff6b6b;
+  position: relative;
+  overflow: hidden;
+}
+
+.birthday-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.birthday-card:hover::before {
+  transform: translateX(100%);
+}
+
+.girlfriend-card {
+  @apply bg-gradient-to-br from-red-200 to-red-300 backdrop-blur-sm rounded-2xl shadow-2xl border-2 border-red-400/30;
+  background-image: linear-gradient(
+    135deg,
+    #ffebee 0%,
+    #ffcdd2 50%,
+    #ef9a9a 100%
+  );
+  box-shadow: 0 20px 40px rgba(239, 154, 154, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.girlfriend-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.girlfriend-card:hover::before {
+  transform: translateX(100%);
+}
+
+/* Detail Card Styles */
+.birthday-detail-card {
+  @apply bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-pink-200/50;
+  box-shadow: 0 25px 50px rgba(244, 143, 177, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.girlfriend-detail-card {
+  @apply bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-red-200/50;
+  box-shadow: 0 25px 50px rgba(239, 154, 154, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Traditional Birthday Card Colors */
+.border-coral-red {
+  border-color: #ff6b6b;
+}
+
+.text-dark-blue {
+  color: #1e3a8a;
+}
+
+.bg-light-blue {
+  background-color: #87ceeb;
+}
+
+.bg-pink-500 {
+  background-color: #ec4899;
+}
+
+/* Enhanced 3D Card flip animations */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Card flip animations */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Interactive Button Styles */
+.cat-button {
+  @apply bg-white/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-white/30 transition-all duration-300 border border-white/20;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cat-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cat-button:active {
+  transform: scale(0.95);
+}
+
+/* Haptic Feedback Animation */
+@keyframes haptic-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+}
+
+.haptic-pulse {
+  animation: haptic-pulse 0.1s ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce-gentle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Sparkle Rotate Animation */
+@keyframes sparkle-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-sparkle-rotate {
+  animation: sparkle-rotate 3s linear infinite;
+}
+
+/* Float Slow Animation */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+/* Message Bubble Styles */
+.message-bubble {
+  @apply bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-white/20;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.message-bubble-birthday {
+  @apply border-pink-200 bg-gradient-to-r from-pink-50 to-pink-100;
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+  box-shadow: 0 10px 25px rgba(244, 143, 177, 0.2),
+    0 0 0 1px rgba(244, 143, 177, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.message-bubble-girlfriend {
+  @apply border-red-200 bg-gradient-to-r from-red-50 to-red-100;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  box-shadow: 0 10px 25px rgba(239, 154, 154, 0.2),
+    0 0 0 1px rgba(239, 154, 154, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Shimmer Effect */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Card Border Glow */
+.card-border-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, #ff69b4, #ffb6c1, #ffd700);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-border-glow:hover::after {
+  opacity: 1;
+}
+
+/* Haptic Feedback */
+@keyframes haptic-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1s ease-in-out infinite;
+}
+
+/* Sparkle Rotate Animation */
+@keyframes sparkle-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-sparkle-rotate {
+  animation: sparkle-rotate 3s linear infinite;
+}
+
+/* Depth Shadows */
+.depth-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.depth-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.depth-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.depth-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.depth-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+/* Mobile Responsive Card Styles */
+@media (max-width: 768px) {
+  .birthday-card {
+    border-width: 6px;
+    margin: 0 1rem;
+  }
+
+  .birthday-card::before {
+    background: linear-gradient(
+      45deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.08) 50%,
+      transparent 80%
+    );
+  }
+
+  .perspective-1000 {
+    perspective: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-card {
+    border-width: 4px;
+    margin: 0 0.5rem;
+  }
+
+  .birthday-card::before {
+    background: linear-gradient(
+      45deg,
+      transparent 15%,
+      rgba(255, 255, 255, 0.06) 50%,
+      transparent 85%
+    );
+  }
+
+  .perspective-1000 {
+    perspective: 600px;
+  }
+}
+
+/* Greeting Card Book Specific Styles */
+.greeting-card-book {
+  aspect-ratio: 3/4;
+  max-width: 500px;
+  min-height: 500px;
+  max-height: 700px;
+  margin: 0 auto;
+}
+
+.greeting-card-book .card-front {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 8px solid #ff6b6b;
+  border-radius: 16px;
+}
+
+.greeting-card-book .card-back {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border-radius: 16px;
+}
+
+/* Mobile Responsive Greeting Card */
+@media (max-width: 768px) {
+  .greeting-card-book {
+    max-width: 400px;
+    min-height: 450px;
+    max-height: 600px;
+  }
+
+  .greeting-card-book .card-front {
+    border-width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting-card-book {
+    max-width: 350px;
+    min-height: 400px;
+    max-height: 550px;
+  }
+
+  .greeting-card-book .card-front {
+    border-width: 4px;
+  }
+}

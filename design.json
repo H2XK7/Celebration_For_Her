@@ -1,0 +1,128 @@
+{
+  "project": {
+    "name": "Birthday & Girlfriend Day Celebration",
+    "target_device": "mobile_first",
+    "theme": "cats_and_flowers",
+    "occasions": ["birthday", "girlfriend_day"]
+  },
+  "technical_stack": {
+    "framework": "Next.js with React",
+    "styling": "Tailwind CSS",
+    "animations": "Framer Motion",
+    "deployment": "Vercel (seamless with Next.js)",
+    "mobile_optimization": "PWA capabilities"
+  },
+  "design_theme": {
+    "color_palette": {
+      "primary": "#FF69B4",
+      "secondary": "#FFB6C1",
+      "accent": "#FFD700",
+      "background": "#FFF8F0",
+      "text": "#8B4513"
+    },
+    "visual_elements": [
+      "cute_cartoon_cats",
+      "flower_crowns_on_cats",
+      "floating_petals_animation",
+      "soft_gradient_backgrounds",
+      "heart_shaped_elements"
+    ],
+    "typography": {
+      "headers": "Comfortaa (playful, rounded)",
+      "body": "Nunito (friendly, readable)",
+      "accent": "Dancing Script (romantic)"
+    }
+  },
+  "interactive_features": [
+    {
+      "name": "Landing Photo Welcome",
+      "description": "Her favorite photo with animated cat ears and flower crown",
+      "mobile_interaction": "tap_to_enter",
+      "photo_used": "photo_1_favorite",
+      "reward": "unlock_games_section"
+    },
+    {
+      "name": "Cat Flower Matching Game",
+      "description": "Match cats with their favorite flowers",
+      "mobile_interaction": "tap_to_match",
+      "reward": "unlock_photo_2_with_love_note"
+    },
+    {
+      "name": "Love Message Puzzle",
+      "description": "Arrange scrambled romantic words",
+      "mobile_interaction": "drag_words_to_complete",
+      "reward": "reveal_photo_3_memory_story"
+    },
+    {
+      "name": "Relationship Quiz",
+      "description": "Questions about your love story",
+      "mobile_interaction": "swipe_to_answer",
+      "reward": "unlock_virtual_garden"
+    },
+    {
+      "name": "Virtual Garden & Photo 4 Reveal",
+      "description": "Plant flowers to reveal final birthday surprise photo",
+      "mobile_interaction": "tap_to_plant",
+      "photo_used": "photo_4_birthday_surprise",
+      "reward": "complete_celebration_message"
+    }
+  ],
+  "photo_optimization": {
+    "total_photos": 4,
+    "photo_treatments": [
+      "soft_romantic_filters",
+      "cat_ear_overlays",
+      "flower_crown_stickers",
+      "heart_shaped_crops",
+      "petal_reveal_animations"
+    ],
+    "photo_flow": "progressive_unlock_system"
+  },
+  "mobile_optimizations": [
+    "touch_friendly_buttons_min_44px",
+    "swipe_gestures",
+    "haptic_feedback",
+    "smooth_60fps_animations",
+    "offline_capability",
+    "fast_loading_images"
+  ],
+  "music_integration": {
+    "background_music": "soft_romantic_instrumental",
+    "music_controls": {
+      "play_button": "cat_paw_design",
+      "volume_slider": "flower_petal_style",
+      "mute_toggle": "cat_ear_animation"
+    },
+    "song_options": [
+      "personal_recording_by_boyfriend",
+      "royalty_free_romantic_instrumental",
+      "nature_sounds_with_piano",
+      "cat_purring_with_soft_melody"
+    ],
+    "music_triggers": [
+      "auto_play_on_photo_reveal",
+      "special_song_for_birthday_finale",
+      "different_melodies_per_game_section"
+    ]
+  },
+  "surprise_elements": [
+    "countdown_timer_to_birthday",
+    "personalized_love_notes",
+    "photo_collage_generator",
+    "custom_song_dedication",
+    "virtual_gift_unwrapping",
+    "music_box_style_player"
+  ],
+  "content_structure": {
+    "landing_page": "animated_welcome_with_cats",
+    "navigation": "flower_petal_menu",
+    "sections": [
+      "birthday_celebration",
+      "girlfriend_appreciation",
+      "memory_lane",
+      "games_zone",
+      "love_messages",
+      "future_dreams"
+    ]
+  }
+}
